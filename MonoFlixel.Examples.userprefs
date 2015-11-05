@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="MonoFlixel.Examples/MonoFlixel.Examples.csproj" MonoDevelop.MonoMac.LastXamMacNagTime="11/4/2015 12:15:01 PM">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoFlixel.Examples/MenuState.cs">
+    <Files>
+      <File FileName="MonoFlixel.Examples/Platformer.cs" Line="34" Column="36" />
+      <File FileName="MonoFlixel.Examples/Main.cs" Line="5" Column="18" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxG.cs" Line="1227" Column="32" />
+      <File FileName="MonoFlixel.Examples/SplitScreen.cs" Line="148" Column="38" />
+      <File FileName="MonoFlixel.Examples/MenuState.cs" Line="13" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

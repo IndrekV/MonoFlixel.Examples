@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1648CCC3-9293-4E9E-989A-641784F347FF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MonoFlixel.Examples</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>MonoFlixel.Examples</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <UseRefCounting>false</UseRefCounting>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <LinkMode>SdkOnly</LinkMode>
+    <UseRefCounting>false</UseRefCounting>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>Developer ID Application</CodeSigningKey>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <EnablePackageSigning>false</EnablePackageSigning>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="MonoMac" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\packages\MonoGame.Framework.MacOS.3.3.0.0\lib\net45\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Sdl">
+      <HintPath>..\packages\MonoGame.Framework.MacOS.3.3.0.0\lib\net45\Tao.Sdl.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\packages\MonoGame.Framework.MacOS.3.3.0.0\lib\net45\OpenTK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Platformer.cs" />
+    <Compile Include="SplitScreen.cs" />
+    <Compile Include="MenuState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Content\Content.mgcb" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="..\..\MonoFlixel\MonoFlixel\MonoFlixel.projitems" Label="Shared" Condition="Exists('..\..\MonoFlixel\MonoFlixel\MonoFlixel.projitems')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="Content\applause.wav" />
+    <Content Include="Content\autotiles.png" />
+    <Content Include="Content\autotiles_alt.png" />
+    <Content Include="Content\background.mp3" />
+    <Content Include="Content\bg.png" />
+    <Content Include="Content\ConsoleFont.spritefont" />
+    <Content Include="Content\ConsoleFont.xnb" />
+    <Content Include="Content\default.png" />
+    <Content Include="Content\flxSharpContent.contentproj" />
+    <Content Include="Content\megaman_run.png" />
+    <Content Include="Content\megaman_run_test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="..\..\MonoFlixel\MonoFlixel\" />
+    <Folder Include="Mode\" />
+  </ItemGroup>
+</Project>

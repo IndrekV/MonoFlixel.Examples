@@ -1,0 +1,2 @@
+2015-11-04 15:19:17.277 MonoFlixel.Examples[86459:1041430] Failed to connect (colorGridView) outlet from (NSApplication) to (NSColorPickerGridView): missing setter or instance variable
+2015-11-04 15:19:17.277 MonoFlixel.Examples[86459:1041430] Failed to connect (view) outlet from (NSApplication) to (NSColorPickerGridView): missing setter or instance variable
