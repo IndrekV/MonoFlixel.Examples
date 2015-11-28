@@ -1,16 +1,31 @@
-﻿<Properties StartupItem="MonoFlixel.Examples/MonoFlixel.Examples.csproj" MonoDevelop.MonoMac.LastXamMacNagTime="11/4/2015 12:15:01 PM">
+﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="11/22/2015 7:22:42 PM" StartupItem="MonoFlixel.Examples/MonoFlixel.Examples.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonoFlixel.Examples/MenuState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../MonoFlixel/MonoFlixel/flixel/FlxSprite.cs">
     <Files>
-      <File FileName="MonoFlixel.Examples/Platformer.cs" Line="34" Column="36" />
-      <File FileName="MonoFlixel.Examples/Main.cs" Line="5" Column="18" />
-      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxG.cs" Line="1227" Column="32" />
-      <File FileName="MonoFlixel.Examples/SplitScreen.cs" Line="148" Column="38" />
-      <File FileName="MonoFlixel.Examples/MenuState.cs" Line="13" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxTilemap.cs" Line="1" Column="1" />
+      <File FileName="MonoFlixel.Examples/SimpleExamples/Platformer.cs" Line="1" Column="1" />
+      <File FileName="MonoFlixel.Examples/SimpleExamples/SplitScreen.cs" Line="106" Column="18" />
+      <File FileName="MonoFlixel.Examples/Content/Tilemap/default_alt.txt" Line="1" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxU.cs" Line="1" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxS.cs" Line="1" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxObject.cs" Line="1" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxGroup.cs" Line="140" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxRect.cs" Line="1" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxTile.cs" Line="34" Column="42" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxState.cs" Line="34" Column="4" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/System/FlxGameRunner.cs" Line="179" Column="41" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/System/FlxGame.cs" Line="575" Column="1" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxBasic.cs" Line="149" Column="47" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxSprite.cs" Line="330" Column="29" />
+      <File FileName="../MonoFlixel/MonoFlixel/flixel/FlxG.cs" Line="1369" Column="10" />
+      <File FileName="MonoFlixel.Examples/SimpleExamples/Tilemap.cs" Line="45" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/indrekv/batcave/MonoFlixel/MonoFlixel/flixel/FlxU.cs" line="374" column="1" />
+      <Breakpoint enabled="false" file="/Users/indrekv/batcave/MonoFlixel.Examples/MonoFlixel.Examples/Mode/Bullet.cs" line="20" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

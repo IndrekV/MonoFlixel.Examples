@@ -41,7 +41,7 @@ namespace MonoFlixel.Examples
 				return null;
 			};
 
-			gameRunner = new FlxGameRunner(320, 240, new PlayState(), 3.0f);
+			gameRunner = new FlxGameRunner(400, 300, new MenuState(), 1.0f);
 			gameRunner.Run();
 		}
 

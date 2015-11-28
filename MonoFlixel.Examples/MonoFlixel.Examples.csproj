@@ -25,6 +25,7 @@
     <EnablePackageSigning>false</EnablePackageSigning>
     <EnableCodeSigning>false</EnableCodeSigning>
     <CreatePackage>false</CreatePackage>
+    <Profiling>false</Profiling>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -41,6 +42,7 @@
     <CodeSigningKey>Developer ID Application</CodeSigningKey>
     <EnableCodeSigning>true</EnableCodeSigning>
     <EnablePackageSigning>false</EnablePackageSigning>
+    <Profiling>false</Profiling>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -62,32 +64,274 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Platformer.cs" />
-    <Compile Include="SplitScreen.cs" />
+    <Compile Include="Mode\Bullet.cs" />
+    <Compile Include="Mode\Enemy.cs" />
+    <Compile Include="Mode\EnemyBullet.cs" />
+    <Compile Include="Mode\Mode.cs" />
+    <Compile Include="Mode\Player.cs" />
+    <Compile Include="Mode\Spawner.cs" />
+    <Compile Include="Mode\VictoryState.cs" />
+    <Compile Include="Mode\ModePlayState.cs" />
+    <Compile Include="Mode\ModeMenuState.cs" />
+    <Compile Include="Bunnymark\Bunny.cs" />
+    <Compile Include="Bunnymark\BunnyPlayState.cs" />
     <Compile Include="MenuState.cs" />
+    <Compile Include="SimpleExamples\Platformer.cs" />
+    <Compile Include="SimpleExamples\SplitScreen.cs" />
+    <Compile Include="SimpleExamples\Particles.cs" />
+    <Compile Include="SimpleExamples\Collision.cs" />
+    <Compile Include="SimpleExamples\Tilemap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Content\Content.mgcb" />
     <None Include="packages.config" />
+    <None Include="Mode\license.txt" />
+    <None Include="Content\applause.wav" />
+    <None Include="Content\background.mp3" />
+    <None Include="Content\Bunnymark\nokiafc40.fnt" />
+    <None Include="Content\Bunnymark\pack" />
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\beep.mp3">
+      <Link>Content\MonoFlixel\beep.mp3</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\deffont.spritefont">
+      <Link>Content\MonoFlixel\deffont.spritefont</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\deffont.xnb">
+      <Link>Content\MonoFlixel\deffont.xnb</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\flixel.mp3">
+      <Link>Content\MonoFlixel\flixel.mp3</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\pack">
+      <Link>Content\MonoFlixel\pack</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\preloader">
+      <Link>Content\MonoFlixel\preloader</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\splashscreen">
+      <Link>Content\MonoFlixel\splashscreen</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\320480\splashscreen">
+      <Link>Content\MonoFlixel\320480\splashscreen</Link>
+    </None>
+    <None Include="..\..\MonoFlixel\MonoFlixel\Content\480800\splashscreen">
+      <Link>Content\MonoFlixel\480800\splashscreen</Link>
+    </None>
+    <None Include="Content\Mode\attract1.fgr" />
+    <None Include="Content\Mode\attract2.fgr" />
+    <None Include="Content\Mode\button.mp3" />
+    <None Include="Content\Mode\countdown.mp3" />
+    <None Include="Content\Mode\enemy.mp3" />
+    <None Include="Content\Mode\hit.mp3" />
+    <None Include="Content\Mode\hurt.mp3" />
+    <None Include="Content\Mode\jam.mp3" />
+    <None Include="Content\Mode\jet.mp3" />
+    <None Include="Content\Mode\jump.mp3" />
+    <None Include="Content\Mode\land.mp3" />
+    <None Include="Content\Mode\menu_hit_2.mp3" />
+    <None Include="Content\Mode\menu_hit.mp3" />
+    <None Include="Content\Mode\mode.mp3" />
+    <None Include="Content\Mode\nokiafc20.fnt" />
+    <None Include="Content\Mode\nokiafc40.fnt" />
+    <None Include="Content\Mode\pack" />
+    <None Include="Content\Mode\shoot.mp3" />
   </ItemGroup>
   <Import Project="..\..\MonoFlixel\MonoFlixel\MonoFlixel.projitems" Label="Shared" Condition="Exists('..\..\MonoFlixel\MonoFlixel\MonoFlixel.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Content Include="Content\applause.wav" />
-    <Content Include="Content\autotiles.png" />
-    <Content Include="Content\autotiles_alt.png" />
-    <Content Include="Content\background.mp3" />
-    <Content Include="Content\bg.png" />
-    <Content Include="Content\ConsoleFont.spritefont" />
-    <Content Include="Content\ConsoleFont.xnb" />
-    <Content Include="Content\default.png" />
-    <Content Include="Content\flxSharpContent.contentproj" />
-    <Content Include="Content\megaman_run.png" />
-    <Content Include="Content\megaman_run_test.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="..\..\MonoFlixel\MonoFlixel\" />
     <Folder Include="Mode\" />
+    <Folder Include="Content\Mode\" />
+    <Folder Include="Content\Bunnymark\" />
+    <Folder Include="Bunnymark\" />
+    <Folder Include="Content\MonoFlixel\" />
+    <Folder Include="SimpleExamples\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\autotiles.png" />
+    <BundleResource Include="Content\autotiles_alt.png" />
+    <BundleResource Include="Content\bg.png" />
+    <BundleResource Include="Content\default.png" />
+    <BundleResource Include="Content\megaman_run.png" />
+    <BundleResource Include="Content\megaman_run_test.png" />
+    <BundleResource Include="Content\Bunnymark\bunny.png" />
+    <BundleResource Include="Content\Bunnymark\grass.png" />
+    <BundleResource Include="Content\Bunnymark\nokiafc40.png" />
+    <BundleResource Include="Content\Bunnymark\pack.png" />
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\autotiles.png">
+      <Link>Content\MonoFlixel\autotiles.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\autotiles_alt.png">
+      <Link>Content\MonoFlixel\autotiles_alt.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\base.png">
+      <Link>Content\MonoFlixel\base.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button.png">
+      <Link>Content\MonoFlixel\button.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_a.png">
+      <Link>Content\MonoFlixel\button_a.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_b.png">
+      <Link>Content\MonoFlixel\button_b.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_c.png">
+      <Link>Content\MonoFlixel\button_c.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_down.png">
+      <Link>Content\MonoFlixel\button_down.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_left.png">
+      <Link>Content\MonoFlixel\button_left.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_right.png">
+      <Link>Content\MonoFlixel\button_right.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_up.png">
+      <Link>Content\MonoFlixel\button_up.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_x.png">
+      <Link>Content\MonoFlixel\button_x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\button_y.png">
+      <Link>Content\MonoFlixel\button_y.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\cursor.png">
+      <Link>Content\MonoFlixel\cursor.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\default.png">
+      <Link>Content\MonoFlixel\default.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\dpad_center.png">
+      <Link>Content\MonoFlixel\dpad_center.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\key_0.png">
+      <Link>Content\MonoFlixel\key_0.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\key_1.png">
+      <Link>Content\MonoFlixel\key_1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\key_c.png">
+      <Link>Content\MonoFlixel\key_c.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\key_minus.png">
+      <Link>Content\MonoFlixel\key_minus.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\key_mouse.png">
+      <Link>Content\MonoFlixel\key_mouse.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\key_plus.png">
+      <Link>Content\MonoFlixel\key_plus.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\key_x.png">
+      <Link>Content\MonoFlixel\key_x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\keys_arrows.png">
+      <Link>Content\MonoFlixel\keys_arrows.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo.png">
+      <Link>Content\MonoFlixel\logo.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_corners.png">
+      <Link>Content\MonoFlixel\logo_corners.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_light.png">
+      <Link>Content\MonoFlixel\logo_light.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\pack.png">
+      <Link>Content\MonoFlixel\pack.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\poweredby.png">
+      <Link>Content\MonoFlixel\poweredby.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\preloader.png">
+      <Link>Content\MonoFlixel\preloader.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\splashscreen.png">
+      <Link>Content\MonoFlixel\splashscreen.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\stick.png">
+      <Link>Content\MonoFlixel\stick.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\xna_tiles.png">
+      <Link>Content\MonoFlixel\xna_tiles.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\320480\splashscreen.png">
+      <Link>Content\MonoFlixel\320480\splashscreen.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\480800\splashscreen.png">
+      <Link>Content\MonoFlixel\480800\splashscreen.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\code.png">
+      <Link>Content\MonoFlixel\logo_parts\code.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\dpad.png">
+      <Link>Content\MonoFlixel\logo_parts\dpad.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\flixel-gdx.png">
+      <Link>Content\MonoFlixel\logo_parts\flixel-gdx.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\gear_blue.png">
+      <Link>Content\MonoFlixel\logo_parts\gear_blue.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\gear_green.png">
+      <Link>Content\MonoFlixel\logo_parts\gear_green.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\gear_grey.png">
+      <Link>Content\MonoFlixel\logo_parts\gear_grey.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\gear_purple.png">
+      <Link>Content\MonoFlixel\logo_parts\gear_purple.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\heart.png">
+      <Link>Content\MonoFlixel\logo_parts\heart.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\lightbulb.png">
+      <Link>Content\MonoFlixel\logo_parts\lightbulb.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\MonoFlixel\MonoFlixel\Content\logo_parts\powered_by.png">
+      <Link>Content\MonoFlixel\logo_parts\powered_by.png</Link>
+    </BundleResource>
+    <BundleResource Include="Content\Mode\bot_bullet.png" />
+    <BundleResource Include="Content\Mode\bot.png" />
+    <BundleResource Include="Content\Mode\bullet.png" />
+    <BundleResource Include="Content\Mode\cursor.png" />
+    <BundleResource Include="Content\Mode\dirt_top.png" />
+    <BundleResource Include="Content\Mode\dirt.png" />
+    <BundleResource Include="Content\Mode\gibs.png" />
+    <BundleResource Include="Content\Mode\jet.png" />
+    <BundleResource Include="Content\Mode\miniframe.png" />
+    <BundleResource Include="Content\Mode\nokiafc20.png" />
+    <BundleResource Include="Content\Mode\nokiafc40.png" />
+    <BundleResource Include="Content\Mode\pack.png" />
+    <BundleResource Include="Content\Mode\spaceman.png" />
+    <BundleResource Include="Content\Mode\spawner_gibs.png" />
+    <BundleResource Include="Content\Mode\spawner.png" />
+    <BundleResource Include="Content\Mode\tech_tiles.png" />
+    <BundleResource Include="Content\Collision\crate.png" />
+    <BundleResource Include="Content\Collision\elevator.png" />
+    <BundleResource Include="Content\Collision\flixelLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\MonoFlixel\MonoFlixel\Content\deffont.xnb">
+      <Link>Content\deffont.xnb</Link>
+    </Content>
+    <Content Include="..\..\MonoFlixel\MonoFlixel\Content\deffont.spritefont">
+      <Link>Content\deffont.spritefont</Link>
+    </Content>
+    <Content Include="Content\Mode\asplode.mp3" />
+    <Content Include="Content\Tilemap\alt_tiles.png" />
+    <Content Include="Content\Tilemap\auto_tiles.png" />
+    <Content Include="Content\Tilemap\empty_tiles.png" />
+    <Content Include="Content\Tilemap\spaceman.png" />
+    <Content Include="Content\Tilemap\default_alt.txt" />
+    <Content Include="Content\Tilemap\default_empty.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Tilemap\default_auto.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

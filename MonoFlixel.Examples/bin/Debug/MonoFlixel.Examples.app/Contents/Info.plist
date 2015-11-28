@@ -13,11 +13,9 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>BuildMachineOSBuild</key>
-	<string>15A284</string>
+	<string>15B42</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-	<key>CFBundleDisplayName</key>
-	<string>MonoFlixel.Examples</string>
 	<key>MonoBundleExecutable</key>
 	<string>MonoFlixel.Examples.exe</string>
 	<key>CFBundleExecutable</key>
@@ -37,7 +35,7 @@
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>15A284</string>
+	<string>15B42</string>
 	<key>DTSDKName</key>
 	<string>macosx10.10</string>
 	<key>DTXcode</key>
