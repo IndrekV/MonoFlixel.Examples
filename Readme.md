@@ -2,7 +2,13 @@
 
 Mostly working examples to demo the possibilities of the framework.
 
-Demos added
+_This project has been abandoned see main library repo Readme for more details [MonoFlixel](https://github.com/IndrekV/MonoFlixel)_
+
+
+
+## Examples
+
+Demos added:
 * Mode
 * EZPLatformer
 * BUnnymark
@@ -10,3 +16,8 @@ Demos added
 * Tilemap
 * Collisions
 
+Running the project will show menu where you can select
+
+## Licence
+
+MIT
